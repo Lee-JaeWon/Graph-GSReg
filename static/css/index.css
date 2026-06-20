@@ -112,6 +112,14 @@ body {
   font-family: 'Inter', sans-serif;
 }
 
+.overview-caption {
+  font-size: 0.95rem !important;
+  color: var(--text-secondary) !important;
+  font-weight: 400 !important;
+  line-height: 1.65;
+  margin-top: 1.25rem;
+}
+
 
 /* Publication hero - wider layout for long titles */
 .publication-hero .hero-body {
