@@ -103,6 +103,15 @@ body {
   padding: 4rem 1.5rem;
 }
 
+.hero > .hero-body {
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+.hero .container.is-max-fullhd {
+  max-width: min(1360px, 98vw);
+}
+
 .teaser .hero-body {
   padding-top: 2rem;
   padding-bottom: 4rem;
@@ -136,13 +145,20 @@ body {
 /* Publication Content Styling */
 .title.is-1.publication-title {
     font-family: 'Inter', sans-serif !important;
-    font-weight: 800 !important;
+    font-weight: 600 !important;
+    font-size: 2.85rem !important;
     color: var(--text-primary) !important;
     margin-bottom: 1.25rem !important;
     line-height: 1.15 !important;
     max-width: 100%;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+@media screen and (min-width: 769px) {
+  .publication-title-line1 {
+    white-space: nowrap;
+  }
 }
 
 .title.is-3.publication-title {
@@ -480,12 +496,17 @@ code {
     padding: 3rem 1rem 2rem;
   }
   
+  .hero > .hero-body {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+  }
+
   .title.is-1.publication-title {
-    font-size: 2.5rem !important;
+    font-size: 2.35rem !important;
     line-height: 1.2 !important;
     margin-bottom: 1.25rem !important;
-    padding-left: 0;
-    padding-right: 0;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
   
   .publication-authors {
@@ -514,7 +535,7 @@ code {
 
 @media screen and (max-width: 480px) {
   .title.is-1.publication-title {
-    font-size: 2rem !important;
+    font-size: 1.9rem !important;
   }
   
   .hero-body {
