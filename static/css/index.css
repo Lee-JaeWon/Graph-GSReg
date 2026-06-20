@@ -150,10 +150,12 @@ body {
     color: var(--text-primary) !important;
     margin-bottom: 1.25rem !important;
     padding-bottom: 0 !important;
+    position: static !important;
 }
 
 .title.is-3.publication-title::after {
-    content: none;
+    display: none !important;
+    content: none !important;
 }
 
 .publication-banner {
