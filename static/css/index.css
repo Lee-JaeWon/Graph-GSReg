@@ -371,6 +371,51 @@ body {
 }
 
 /* Footer Improvements */
+.affiliation-logos {
+  padding: 2.5rem 1.5rem 1.5rem;
+  background: var(--background-primary);
+  border-top: 1px solid var(--border-color);
+}
+
+.affiliation-logos .logo-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem 3rem;
+}
+
+.affiliation-logos a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 0;
+}
+
+.affiliation-logos img {
+  max-height: 54px;
+  width: auto;
+  max-width: 190px;
+  object-fit: contain;
+  opacity: 0.88;
+  transition: opacity 0.2s ease;
+}
+
+.affiliation-logos .logo-yonsei img {
+  max-height: 56px;
+  max-width: 260px;
+}
+
+.affiliation-logos .logo-eccv img {
+  height: 88px;
+  width: auto;
+  max-width: 320px;
+}
+
+.affiliation-logos a:hover img {
+  opacity: 1;
+}
+
 .footer {
   background: var(--background-secondary);
   border-top: 1px solid var(--border-color);
@@ -540,6 +585,29 @@ code {
   
   .hero-body {
     padding: 1.5rem 0.75rem;
+  }
+
+  .affiliation-logos {
+    padding: 2rem 1rem 1rem;
+  }
+
+  .affiliation-logos .logo-row {
+    gap: 1.5rem 2rem;
+  }
+
+  .affiliation-logos img {
+    max-height: 44px;
+    max-width: 155px;
+  }
+
+  .affiliation-logos .logo-yonsei img {
+    max-height: 46px;
+    max-width: 210px;
+  }
+
+  .affiliation-logos .logo-eccv img {
+    height: 68px;
+    max-width: 250px;
   }
   
   .link-block {
