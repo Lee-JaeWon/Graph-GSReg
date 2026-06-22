@@ -343,13 +343,19 @@ body {
   font-weight: 700 !important;
   color: var(--text-primary);
   margin-bottom: 1.5rem !important;
+  padding-bottom: 0 !important;
+}
+
+.title.is-3:not(.publication-title)::after {
+  display: none !important;
+  content: none !important;
 }
 
 /* Content Improvements */
 .content.has-text-justified {
   font-size: 1.1rem;
   line-height: 1.8;
-  color: var(--text-secondary);
+  color: #334155;
 }
 
 .content.has-text-justified p {
