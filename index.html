@@ -271,6 +271,30 @@
 </section>
 <!-- End overview figure -->
 
+<!-- Paper abstract -->
+<section class="section hero is-light">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            3D Gaussian Splatting (3DGS) has recently emerged as a powerful scene representation for high-fidelity rendering and 3D mapping. However, large environments are often reconstructed as multiple local 3DGS submaps, which may be built independently and defined in different coordinate systems. Registering and merging such 3DGS scenes remains challenging due to two main issues:
+          </p>
+          <ul>
+            <li><strong>Primitive-level inconsistency:</strong> independently reconstructed 3DGS scenes do not provide reliable cross-scene correspondences between Gaussian primitives.</li>
+            <li><strong>Merging artifacts:</strong> directly combining aligned 3DGS scenes often introduces hollows, floaters, and occlusion inconsistencies.</li>
+          </ul>
+          <p>
+            To address these issues, we introduce Graph-GSReg, a training-free framework for robust 3DGS registration and seamless scene merging. Graph-GSReg converts each 3DGS scene into an object-level 3D scene graph that captures semantic and structural context, and reformulates 3DGS registration as a graph registration problem. It further refines the unified scene through Self-Supervised Test-Time Optimization, using the original renderable 3DGS scenes as self-supervised references. Across real-world, synthetic, and outdoor benchmarks, Graph-GSReg achieves accurate registration, efficient alignment, and high-quality merged-scene rendering.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End paper abstract -->
+
 <!--
 Teaser video
 <section class="hero teaser">
