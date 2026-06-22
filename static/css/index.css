@@ -131,6 +131,30 @@ body {
   text-align: center;
 }
 
+.quantitative-figure {
+  margin: 0 0 2.5rem;
+}
+
+.quantitative-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.qualitative-figure {
+  margin: 0 0 2.75rem;
+}
+
+.qualitative-figure img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.qualitative-figure .overview-caption {
+  margin-top: 1rem;
+}
+
 
 /* Publication hero - wider layout for long titles */
 .publication-hero .hero-body {

@@ -84,7 +84,7 @@
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css?v=section-style-v2">
+  <link rel="stylesheet" href="static/css/index.css?v=qualitative-results">
   
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -309,6 +309,52 @@
   </div>
 </section>
 <!-- End paper abstract -->
+
+<!-- Qualitative results -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-11">
+        <figure class="qualitative-figure">
+          <img src="assets/qualitative_scannet.png" alt="Qualitative merging results on ScanNet-GSReg" loading="lazy">
+          <figcaption class="subtitle has-text-centered overview-caption">
+            Qualitative results on the ScanNet-GSReg dataset. Each row shows rendered images from merged Gaussians. The yellow box highlights regions with severe hollows or occlusions.
+          </figcaption>
+        </figure>
+        <figure class="qualitative-figure">
+          <img src="assets/qualitative_uhumans2.png" alt="Qualitative merging results on uHumans2" loading="lazy">
+          <figcaption class="subtitle has-text-centered overview-caption">
+            Qualitative results on the uHumans2 synthetic dataset. Each row shows rendered images from merged Gaussians. The yellow box highlights regions with severe hollows or occlusions.
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End qualitative results -->
+
+<!-- Quantitative results -->
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-11">
+        <figure class="quantitative-figure">
+          <img src="assets/quantitative_benchmark1.png" alt="Quantitative comparison on ScanNet-GSReg" loading="lazy">
+        </figure>
+        <figure class="quantitative-figure">
+          <img src="assets/quantitative_uhumans2.png" alt="Quantitative comparison on uHumans2" loading="lazy">
+        </figure>
+        <figure class="quantitative-figure">
+          <img src="assets/quantitative_merging_scannet.png" alt="Merging comparison on ScanNet-GSReg" loading="lazy">
+        </figure>
+        <figure class="quantitative-figure">
+          <img src="assets/quantitative_merging_uhumans2.png" alt="Merging comparison on uHumans2" loading="lazy">
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- End quantitative results -->
 
 <!--
 Teaser video
