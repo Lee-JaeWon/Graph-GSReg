@@ -141,6 +141,214 @@ body {
   display: block;
 }
 
+.quant-chart {
+  background: #fff;
+  padding: 0.25rem 0 0.5rem;
+}
+
+.quant-chart-header {
+  margin-bottom: 1.75rem;
+}
+
+.quant-chart-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1.35;
+  margin: 0 0 0.55rem;
+}
+
+.quant-chart-badge {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #1d4ed8;
+  margin: 0 0 0.35rem;
+}
+
+.quant-chart-subtitle {
+  font-size: 0.82rem;
+  color: #64748b;
+  margin: 0;
+}
+
+.quant-metric {
+  margin-bottom: 1.85rem;
+}
+
+.quant-metric:last-child {
+  margin-bottom: 0;
+}
+
+.quant-metric-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.65rem;
+}
+
+.quant-axis {
+  height: 1px;
+  background: #eef2f7;
+  margin-bottom: 0.35rem;
+}
+
+.quant-bars {
+  display: flex;
+  flex-direction: column;
+  gap: 0.42rem;
+}
+
+.quant-bar-row {
+  display: grid;
+  grid-template-columns: minmax(9.5rem, 34%) 1fr;
+  gap: 0.65rem;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0.18rem 0.35rem 0.18rem 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.quant-bar-row:hover,
+.quant-bar-row:focus-visible {
+  background: #f8fbff;
+  outline: none;
+}
+
+.quant-label {
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: #475569;
+  line-height: 1.25;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+}
+
+.quant-bar-row.is-ours .quant-label {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.quant-bar-row:hover .quant-label,
+.quant-bar-row:focus-visible .quant-label {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.quant-bar-row.is-ours:hover .quant-label,
+.quant-bar-row.is-ours:focus-visible .quant-label {
+  font-weight: 700;
+}
+
+.quant-bar-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 1.55rem;
+  padding-top: 0.1rem;
+}
+
+.quant-bar {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 62%;
+  min-height: 0.72rem;
+  min-width: 3px;
+  transform: translateY(-50%);
+  border-radius: 3px;
+  transition: transform 0.22s ease, filter 0.22s ease, box-shadow 0.22s ease;
+  transform-origin: left center;
+  z-index: 1;
+}
+
+.quant-bar-row:hover .quant-bar,
+.quant-bar-row:focus-visible .quant-bar {
+  transform: translateY(-50%) scaleY(1.22);
+  filter: brightness(1.06);
+  box-shadow: 0 3px 14px rgba(29, 78, 216, 0.22);
+}
+
+.quant-bar-row.is-ours:hover .quant-bar,
+.quant-bar-row.is-ours:focus-visible .quant-bar {
+  filter: brightness(1.12);
+  box-shadow: 0 4px 16px rgba(29, 78, 216, 0.32);
+}
+
+.quant-value {
+  position: relative;
+  z-index: 2;
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: #64748b;
+  white-space: nowrap;
+  transition: color 0.2s ease, font-weight 0.2s ease;
+  pointer-events: none;
+}
+
+.quant-bar-row.is-ours .quant-value {
+  color: #1e293b;
+  font-weight: 600;
+}
+
+.quant-bar-row.is-best .quant-value {
+  font-weight: 700;
+}
+
+.quant-bar-row:hover .quant-value,
+.quant-bar-row:focus-visible .quant-value {
+  color: #1e293b;
+  font-weight: 700;
+}
+
+.quant-best {
+  position: relative;
+  z-index: 2;
+  margin-left: 0.45rem;
+  padding: 0.12rem 0.42rem;
+  border-radius: 999px;
+  background: #1d4ed8;
+  color: #fff;
+  font-size: 0.62rem;
+  font-weight: 600;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
+.quant-tooltip {
+  position: absolute;
+  left: 50%;
+  top: -2rem;
+  transform: translateX(-50%) translateY(4px);
+  padding: 0.28rem 0.55rem;
+  border-radius: 6px;
+  background: #1e293b;
+  color: #fff;
+  font-size: 0.68rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  z-index: 5;
+}
+
+.quant-bar-row:hover .quant-tooltip,
+.quant-bar-row:focus-visible .quant-tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (max-width: 768px) {
+  .quant-bar-row {
+    grid-template-columns: 1fr;
+    gap: 0.3rem;
+  }
+
+  .quant-label {
+    font-size: 0.72rem;
+  }
+}
+
 .qualitative-figure {
   margin: 0 0 2.75rem;
 }

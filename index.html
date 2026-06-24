@@ -84,7 +84,7 @@
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css?v=qualitative-results">
+  <link rel="stylesheet" href="static/css/index.css?v=interactive-quant-v2">
   
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -110,6 +110,7 @@
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
   <script defer src="static/js/index.js"></script>
+  <script defer src="static/js/quantitative-charts.js"></script>
   
   <!-- Structured Data for Academic Papers -->
   <script type="application/ld+json">
@@ -339,16 +340,16 @@
     <div class="columns is-centered">
       <div class="column is-11">
         <figure class="quantitative-figure">
-          <img src="assets/quantitative_benchmark1.png" alt="Quantitative comparison on ScanNet-GSReg" loading="lazy">
+          <div id="quant-reg-scannet" class="quant-chart-mount" aria-label="Quantitative comparison on ScanNet-GSReg"></div>
         </figure>
         <figure class="quantitative-figure">
-          <img src="assets/quantitative_uhumans2.png" alt="Quantitative comparison on uHumans2" loading="lazy">
+          <div id="quant-reg-uhumans2" class="quant-chart-mount" aria-label="Quantitative comparison on uHumans2"></div>
         </figure>
         <figure class="quantitative-figure">
-          <img src="assets/quantitative_merging_scannet.png" alt="Merging comparison on ScanNet-GSReg" loading="lazy">
+          <div id="quant-merge-scannet" class="quant-chart-mount" aria-label="Merging comparison on ScanNet-GSReg"></div>
         </figure>
         <figure class="quantitative-figure">
-          <img src="assets/quantitative_merging_uhumans2.png" alt="Merging comparison on uHumans2" loading="lazy">
+          <div id="quant-merge-uhumans2" class="quant-chart-mount" aria-label="Merging comparison on uHumans2"></div>
         </figure>
       </div>
     </div>
