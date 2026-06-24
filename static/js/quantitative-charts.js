@@ -411,6 +411,50 @@
 
   function initQuantitativeCharts() {
     CHARTS.forEach(renderChart);
+    setupQuantNav();
+  }
+
+  function setupQuantNav() {
+    const nav = document.querySelector(".quant-nav");
+    if (!nav) return;
+
+    const links = Array.from(nav.querySelectorAll(".quant-nav-btn"));
+    const targets = links
+      .map((link) => {
+        const id = link.getAttribute("href")?.slice(1);
+        return id ? document.getElementById(id) : null;
+      })
+      .filter(Boolean);
+
+    links.forEach((link) => {
+      link.addEventListener("click", (event) => {
+        event.preventDefault();
+        const id = link.getAttribute("href")?.slice(1);
+        const target = id ? document.getElementById(id) : null;
+        if (!target) return;
+
+        links.forEach((item) => item.classList.remove("is-active"));
+        link.classList.add("is-active");
+        target.scrollIntoView({ behavior: "smooth", block: "start" });
+        history.replaceState(null, "", "#" + id);
+      });
+    });
+
+    if ("IntersectionObserver" in window && targets.length) {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+            const id = entry.target.id;
+            links.forEach((link) => {
+              link.classList.toggle("is-active", link.getAttribute("href") === "#" + id);
+            });
+          });
+        },
+        { root: null, rootMargin: "-30% 0px -55% 0px", threshold: 0 }
+      );
+      targets.forEach((target) => observer.observe(target));
+    }
   }
 
   if (document.readyState === "loading") {

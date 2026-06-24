@@ -84,7 +84,7 @@
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css?v=interactive-quant-v2">
+  <link rel="stylesheet" href="static/css/index.css?v=qualitative-section-title">
   
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -312,10 +312,11 @@
 <!-- End paper abstract -->
 
 <!-- Qualitative results -->
-<section class="section">
+<section class="section" id="qualitative-results">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-11">
+        <h2 class="title is-3 has-text-centered quant-section-title">Qualitative Results</h2>
         <figure class="qualitative-figure">
           <img src="assets/qualitative_scannet.png" alt="Qualitative merging results on ScanNet-GSReg" loading="lazy">
           <figcaption class="subtitle has-text-centered overview-caption">
@@ -335,20 +336,27 @@
 <!-- End qualitative results -->
 
 <!-- Quantitative results -->
-<section class="section">
+<section class="section" id="quantitative-results">
   <div class="container is-max-desktop">
     <div class="columns is-centered">
       <div class="column is-11">
-        <figure class="quantitative-figure">
+        <h2 class="title is-3 has-text-centered quant-section-title">Quantitative Results</h2>
+        <nav class="quant-nav" aria-label="Quantitative comparison navigation">
+          <a href="#quant-reg-scannet" class="quant-nav-btn">Registration · ScanNet-GSReg</a>
+          <a href="#quant-reg-uhumans2" class="quant-nav-btn">Registration · uHumans2</a>
+          <a href="#quant-merge-scannet" class="quant-nav-btn">Merging · ScanNet-GSReg</a>
+          <a href="#quant-merge-uhumans2" class="quant-nav-btn">Merging · uHumans2</a>
+        </nav>
+        <figure class="quantitative-figure quant-chart-target">
           <div id="quant-reg-scannet" class="quant-chart-mount" aria-label="Quantitative comparison on ScanNet-GSReg"></div>
         </figure>
-        <figure class="quantitative-figure">
+        <figure class="quantitative-figure quant-chart-target">
           <div id="quant-reg-uhumans2" class="quant-chart-mount" aria-label="Quantitative comparison on uHumans2"></div>
         </figure>
-        <figure class="quantitative-figure">
+        <figure class="quantitative-figure quant-chart-target">
           <div id="quant-merge-scannet" class="quant-chart-mount" aria-label="Merging comparison on ScanNet-GSReg"></div>
         </figure>
-        <figure class="quantitative-figure">
+        <figure class="quantitative-figure quant-chart-target">
           <div id="quant-merge-uhumans2" class="quant-chart-mount" aria-label="Merging comparison on uHumans2"></div>
         </figure>
       </div>

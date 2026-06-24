@@ -135,6 +135,68 @@ body {
   margin: 0 0 2.5rem;
 }
 
+.quant-chart-target {
+  scroll-margin-top: 1.25rem;
+}
+
+.quant-section-title {
+  margin-bottom: 1.1rem;
+}
+
+.quant-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  justify-content: center;
+  margin: 0 0 1.65rem;
+  padding: 0.55rem 0.65rem;
+  border-radius: 10px;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.quant-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.34rem 0.68rem;
+  font-size: 0.7rem;
+  font-weight: 600;
+  line-height: 1.25;
+  color: #475569;
+  background: #fff;
+  border: 1px solid #dbe4f0;
+  border-radius: 999px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.18s ease, background-color 0.18s ease, border-color 0.18s ease,
+    transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.quant-nav-btn:hover,
+.quant-nav-btn:focus-visible {
+  color: #1d4ed8;
+  border-color: #93c5fd;
+  background: #eff6ff;
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(29, 78, 216, 0.14);
+  outline: none;
+}
+
+.quant-nav-btn.is-active {
+  color: #fff;
+  border-color: #1d4ed8;
+  background: #1d4ed8;
+  box-shadow: 0 2px 10px rgba(29, 78, 216, 0.28);
+}
+
+@media (max-width: 768px) {
+  .quant-nav-btn {
+    font-size: 0.66rem;
+    padding: 0.32rem 0.58rem;
+  }
+}
+
 .quantitative-figure img {
   width: 100%;
   height: auto;
