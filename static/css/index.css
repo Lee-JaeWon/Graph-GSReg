@@ -790,19 +790,78 @@ code {
   content: "ied!";
 }
 
-/* About Me — fixed top-right */
-.about-me-fab {
+/* About Me — fixed top-right dropdown */
+.about-me-menu {
   position: fixed;
   top: 0.75rem;
   right: 0.75rem;
   z-index: 1000;
+}
+
+.about-me-fab {
   margin: 0 !important;
   font-size: 0.82rem !important;
   font-weight: 600 !important;
-  padding: 0.45rem 0.9rem !important;
+  padding: 0.45rem 0.85rem !important;
   height: auto !important;
   line-height: 1.2 !important;
   white-space: nowrap;
+  display: inline-flex !important;
+  align-items: center;
+  gap: 0.35rem;
+  cursor: pointer;
+}
+
+.about-me-chevron {
+  font-size: 0.55rem;
+  opacity: 0.85;
+  transition: transform 0.2s ease;
+}
+
+.about-me-menu.is-open .about-me-chevron {
+  transform: rotate(180deg);
+}
+
+.about-me-dropdown {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  right: 0;
+  min-width: 10.5rem;
+  padding: 0.3rem;
+  background: #fff;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  box-shadow: var(--shadow-md);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4px);
+  pointer-events: none;
+  transition: opacity 0.18s ease, transform 0.18s ease, visibility 0.18s ease;
+}
+
+.about-me-menu.is-open .about-me-dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.about-me-item {
+  display: block;
+  padding: 0.42rem 0.65rem;
+  font-size: 0.78rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  text-decoration: none;
+  border-radius: 7px;
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+.about-me-item:hover,
+.about-me-item:focus-visible {
+  background: var(--background-secondary);
+  color: var(--primary-color);
+  outline: none;
 }
 
 /* Scroll to Top Button */

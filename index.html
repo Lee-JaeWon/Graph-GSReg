@@ -84,7 +84,7 @@
   
   <!-- Critical CSS - Load synchronously -->
   <link rel="stylesheet" href="static/css/bulma.min.css">
-  <link rel="stylesheet" href="static/css/index.css?v=about-me-fab-v2">
+  <link rel="stylesheet" href="static/css/index.css?v=about-me-dropdown-v2">
   
   <!-- Non-critical CSS - Load asynchronously -->
   <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
@@ -109,7 +109,7 @@
   <script defer src="static/js/fontawesome.all.min.js"></script>
   <script defer src="static/js/bulma-carousel.min.js"></script>
   <script defer src="static/js/bulma-slider.min.js"></script>
-  <script defer src="static/js/index.js"></script>
+  <script defer src="static/js/index.js?v=about-me-dropdown"></script>
   <script defer src="static/js/quantitative-charts.js"></script>
   
   <!-- Structured Data for Academic Papers -->
@@ -183,9 +183,17 @@
 </head>
 <body>
 
-  <a href="https://lee-jaewon.github.io/ljw_cv_page/" class="about-me-fab button is-normal is-rounded is-dark external-link" target="_blank" rel="noopener noreferrer" aria-label="About Me">
-    <span>About Me</span>
-  </a>
+  <div class="about-me-menu">
+    <button type="button" class="about-me-fab button is-normal is-rounded is-dark" id="about-me-toggle" aria-expanded="false" aria-haspopup="true" aria-controls="about-me-dropdown">
+      <span>About Me</span>
+      <i class="fas fa-chevron-down about-me-chevron" aria-hidden="true"></i>
+    </button>
+    <div class="about-me-dropdown" id="about-me-dropdown" role="menu" aria-labelledby="about-me-toggle" aria-hidden="true">
+      <a href="https://lee-jaewon.github.io/ljw_cv_page/" class="about-me-item" role="menuitem" target="_blank" rel="noopener noreferrer">Jaewon Lee</a>
+      <a href="https://kmk97.github.io/" class="about-me-item" role="menuitem" target="_blank" rel="noopener noreferrer">Mangyu Kong</a>
+      <a href="https://cilab.yonsei.ac.kr/" class="about-me-item" role="menuitem" target="_blank" rel="noopener noreferrer">CILAB@Yonsei Univ.</a>
+    </div>
+  </div>
 
   <!-- Scroll to Top Button -->
   <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">

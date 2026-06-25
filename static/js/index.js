@@ -83,6 +83,53 @@ function setupVideoCarouselAutoplay() {
     });
 }
 
+function setupAboutMeMenu() {
+    const menu = document.querySelector('.about-me-menu');
+    const toggle = document.getElementById('about-me-toggle');
+    const dropdown = document.getElementById('about-me-dropdown');
+    if (!menu || !toggle || !dropdown) return;
+
+    function closeMenu() {
+        menu.classList.remove('is-open');
+        toggle.setAttribute('aria-expanded', 'false');
+        dropdown.setAttribute('aria-hidden', 'true');
+    }
+
+    function openMenu() {
+        menu.classList.add('is-open');
+        toggle.setAttribute('aria-expanded', 'true');
+        dropdown.setAttribute('aria-hidden', 'false');
+    }
+
+    toggle.addEventListener('click', function(event) {
+        event.preventDefault();
+        event.stopPropagation();
+        if (menu.classList.contains('is-open')) {
+            closeMenu();
+        } else {
+            openMenu();
+        }
+    });
+
+    document.addEventListener('click', function(event) {
+        if (!menu.contains(event.target)) {
+            closeMenu();
+        }
+    });
+
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            closeMenu();
+        }
+    });
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', setupAboutMeMenu);
+} else {
+    setupAboutMeMenu();
+}
+
 $(document).ready(function() {
     // Check for click events on the navbar burger icon
 
@@ -96,9 +143,13 @@ $(document).ready(function() {
     }
 
 	// Initialize all div with carousel class
-    var carousels = bulmaCarousel.attach('.carousel', options);
-	
-    bulmaSlider.attach();
+    if (document.querySelector('.carousel') && typeof bulmaCarousel !== 'undefined') {
+        bulmaCarousel.attach('.carousel', options);
+    }
+
+    if (typeof bulmaSlider !== 'undefined') {
+        bulmaSlider.attach();
+    }
     
     // Setup video autoplay for carousel
     setupVideoCarouselAutoplay();
