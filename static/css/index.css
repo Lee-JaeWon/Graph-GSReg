@@ -790,6 +790,21 @@ code {
   content: "ied!";
 }
 
+/* About Me — fixed top-right */
+.about-me-fab {
+  position: fixed;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 1000;
+  margin: 0 !important;
+  font-size: 0.82rem !important;
+  font-weight: 600 !important;
+  padding: 0.45rem 0.9rem !important;
+  height: auto !important;
+  line-height: 1.2 !important;
+  white-space: nowrap;
+}
+
 /* Scroll to Top Button */
 .scroll-to-top {
   position: fixed;
