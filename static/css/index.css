@@ -131,6 +131,18 @@ body {
   text-align: center;
 }
 
+.main-gif-section {
+  padding-top: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.main-gif {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
 .quantitative-figure {
   margin: 0 0 2.5rem;
 }
